@@ -1,0 +1,86 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Amatic+SC:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/all.min.css" rel ="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="w-100 h-100 position-absolute z-2 layer d-none" id ="submitLayer">
+    <div class="p-3 press-submit border-1 rounded-3 bg-white position-absolute  ">
+    
+    <div class="d-flex justify-content-between">
+            <div class=" py-3 d-flex gap-2 circles" >
+         <div class="item1 bg-danger"></div>
+         <div class="item2"></div>
+         <div class="item3"></div>
+
+     </div>
+     <button onclick='closeSubmitLayer()' class="btn border-0" id="closeBtn">
+        <i class="fa-solid fa-xmark close fs-3"></i>
+      </button>
+      </div>
+     <p class="fw-bolder fs-5">Site Name or Url is not valid, Please follow the rules below:</p>
+     <div class=" d-flex align-items-center ">
+        <i class="text-danger fa-regular fa-circle-right p-2"></i>
+        <p class="fs-5 p ">Site name must contain at least 3 characters
+        </p>
+     </div>
+     <div class="d-flex align-items-center ">
+        <i class="text-danger fa-regular fa-circle-right p-2"></i>
+        <p class="fs-5 p">Site URL must be a valid one
+        </p>
+     </div>
+   
+    </div>
+      
+
+
+
+
+    </div>
+ <div class="container d-flex flex-column justify-content-center align-items-center">
+    <h1 class =" mt-5 py-2 position-relative">Bookmarker</h1>
+    <div class="form p-3 mt-4  w-100">
+        <article class="text-center py-3"><h2><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i></h2></article>
+         <div class="d-flex flex-row  align-items-center">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>      
+         <label for ="siteName" class=" fw-bolder py-3" >Site Name</label>
+          </div>  
+          
+         <input oninput="writeName(this.value)" id ="siteName" placeholder="Bookmark Name" class="form-control">
+         <div class="d-flex flex-row align-items-center">
+            <i class="fa-solid fa-link pe-2"></i>
+         <label for ="siteUrl" class="fw-bolder py-3">Site URL</label>
+         </div>
+         <input oninput="writeUrl(this.value)" placeholder="Site URL" id ="siteUrl" class="form-control">
+        <div class="text-center">
+        
+            <button onclick="addProduct()" class="px-5 btn button-submit bg-info mt-3" id="btn-submit" type="submit">Submit</button>
+            
+            </div>
+        </div>
+        <table div class=" mt-5 table">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+
+            </thead>
+            <tbody id ="tableBody">
+
+            </tbody>
+        </table>
+</div>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
